@@ -1,0 +1,14 @@
+*.txt
+A/*.o
+A/*.img
+B/*.o
+B/*.img
+C/*.o
+C/*.img
+.cache/
+project/compile_commands.json
+project/.cache/
+project/guest/build/
+project/guest/.cache/
+project/host/build/
+project/host/.cache/
