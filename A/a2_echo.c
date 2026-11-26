@@ -32,17 +32,13 @@ static inline uint8_t inb(uint16_t port)
 	return value;
 }
 
-static __attribute__((noreturn)) void halt_forever(void)
-{
-	for (;;)
-		asm volatile("hlt");
-}
-
 void
 __attribute__((noreturn))
 __attribute__((section(".start")))
 _start(void)
 {
+	gdt_boot();
+
 	serial_puts("A2: START\n");
 
 	for (int i = 0; i < ECHO_COUNT; ++i) {

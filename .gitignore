@@ -1,4 +1,4 @@
-*.txt
+shared.txt
 A/*.o
 A/*.img
 B/*.o
